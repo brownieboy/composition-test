@@ -4,8 +4,10 @@ var Vehicle = React.createClass({
     },
 
     handleClick: function(e) {
-        this.props.handleClick ? this.props.handleClick() : null;
         console.log("Engine started");
+        if(this.props.handleClick) {
+            this.props.handleClick()
+        }
     },
 
     render: function() {
@@ -24,7 +26,6 @@ var Airplane = React.createClass({
     },
 
     handleClick: function(e) {
-        this.props.handleClick ? this.props.handleClick() : null;
         console.log("Flying!");
     },
 
